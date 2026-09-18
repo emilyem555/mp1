@@ -1,1 +1,206 @@
 /* Your SCSS here. */
+
+/* srcs:- https://www.w3schools.com/css/css_background_image.asp
+        - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit*/
+$nav-height:10vh;
+$color1:grey;
+$color2: rgb(41, 95, 99);
+
+html {
+    background-color: black;
+    color: white;
+}
+
+
+
+#modal-window {
+    background-color: rgb(255, 255, 255,0.6);
+    color:black;
+    position: fixed; 
+    z-index: 1; 
+    height:90vh;
+    width:100vw;
+    margin-top:8vh;
+    display:none;
+    padding-bottom:5vw;
+    justify-content: center;
+    text-align: left;
+    #close {
+        padding-top:3vh;
+    }
+    #modal-content {
+        text-align: center;
+        img{
+            height:70vh;
+        }
+    }
+}
+body {
+    margin: 0;
+    #title-card {
+        background-color: $color1;
+        color:white;
+        padding-bottom:3rem;
+        div {
+            padding-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            margin-top:3%;
+            width: 20%;
+            border-radius: 50%;
+            box-shadow: 1rem 1rem 1rem rgb(29, 31, 32);
+        }
+    }
+
+    #col_card {
+        background-color: $color2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-hover {
+            background-color: rgba(128, 128, 128, 0.293);
+            width:100%;
+            height:100%;
+            display:none;
+            justify-content: center;
+            align-items: center;
+        }
+        td {
+            border:1vw solid $color2;
+            width:20vw;
+            height:40vh;
+            background-image: url("../assets/EmilyHeadshot.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+        }
+    }
+
+    #carousel {
+        background-color: $color1;
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        div {
+            background-color: $color1;
+            border-radius: 50%;
+            :active {
+                color:rgb(211, 211, 211);
+            }
+            i {
+                color:white;
+                
+            }
+        }
+
+        img {
+            margin-right:2rem;
+            margin-left:2rem;
+            // transition: 1s;
+            width:30vw;
+            height:30vw;
+            object-fit: cover;
+        }
+    }
+    #img-back{
+        background-image: url("../assets/EmilyHeadshot.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        object-position: 50% 0%;
+        height:90vh;
+    }
+
+    video {
+        width:100vw;
+    }
+}
+
+// .active {
+//     border-radius: 2rem;
+//     width:fit-content;
+//     margin-right: 0.5rem;
+//     background-color:  $color2;
+//     border-radius: 0.5vh;
+//     height:6vh;
+//     h2 {
+//         padding-left: 1rem;
+//         padding-right:1rem;
+//         padding-top:0.75rem;
+//         padding-bottom:0.75rem;
+//     }
+// }
+// need to change the text size based on page position/pagesize
+nav {
+    position:sticky;
+    top:0;
+    box-sizing: border-box;
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    color: white;
+    height: $nav-height;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 1rem 0px 1rem rgb(29, 31, 32);
+    transition: 0.4s;
+    
+    #title {
+        width:fit-content;
+        h1 {
+            padding: 1rem;
+        }
+    }
+    #sections {
+        display:flex;
+        #section1, #section2, #section3, #section4, #section5 {
+            border-radius: 2rem;
+            width:fit-content;
+            margin-right: 0.5rem;
+            :hover {
+                background-color: $color2;
+                border-radius: 0.5vh;
+                cursor:pointer;
+            }
+            h2 {
+                padding-left: 1rem;
+                padding-right:1rem;
+                padding-top:0.75rem;
+                padding-bottom:0.75rem;
+                margin:0;
+            }
+        }
+
+        #section1.active,
+        #section2.active,
+        #section3.active,
+        #section4.active,
+        #section5.active {
+            width:fit-content;
+            padding:0;
+            background-color: $color2;
+            border-radius: 0.5vh;
+            height: fit-content;
+        }
+    }
+
+    
+}
+
+footer {
+    padding-top: 2vh;
+    padding-bottom:2vh;
+    background-color: black;
+    color:white;
+    display:flex;
+    bottom: 0;
+    justify-content: center;
+    a {
+        color:white;
+    }
+}
