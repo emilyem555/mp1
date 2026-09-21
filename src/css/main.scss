@@ -3,30 +3,32 @@
 /* srcs:- https://www.w3schools.com/css/css_background_image.asp
         - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit*/
 $nav-height:10vh;
-$color1:grey;
-$color2: rgb(41, 95, 99);
+$color1:rgb(28, 61, 85);
+$color2: rgb(27, 27, 27);
+$color3:rgb(11, 25, 34);
 
 html {
     background-color: black;
     color: white;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-
-
 #modal-window {
-    background-color: rgb(255, 255, 255,0.6);
-    color:black;
+    background-color: rgba(187, 208, 224, 0.95);
+    color:$color3;
     position: fixed; 
-    z-index: 1; 
-    height:90vh;
+    z-index: 2; 
+    height:100vh;
     width:100vw;
-    margin-top:8vh;
     display:none;
     padding-bottom:5vw;
     justify-content: center;
     text-align: left;
     #close {
-        padding-top:3vh;
+        position: absolute;
+        top: 3vh;
+        right: 2vw;
+        text-align: right;
     }
     #modal-content {
         text-align: center;
@@ -34,86 +36,203 @@ html {
             height:70vh;
         }
     }
+
+    h1 {
+        font-weight:700;
+        font-size: 40px;
+        margin-top:3vh;
+    }
+
+    img {
+        border-radius: 5%;
+        margin-top:2vh;
+        margin-bottom:3vh;
+        height:40vh;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 2vw;
+    }
 }
 body {
     margin: 0;
     #title-card {
-        background-color: $color1;
+        height:80vh;
         color:white;
-        padding-bottom:3rem;
-        div {
-            padding-top: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
+        #overlay {
+            position: absolute;
+            z-index: 0;
+            top:20%;
+            h1 {
+                font-size:46px;
+            }
+            img {
+                margin-top:3%;
+                width: 20vw;
+                border-radius: 50%;
+                box-shadow: 0.5rem 0.5rem 1rem rgb(193, 233, 253);
+            }
+            div {
+                padding-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
-        img {
-            margin-top:3%;
-            width: 20%;
-            border-radius: 50%;
-            box-shadow: 1rem 1rem 1rem rgb(29, 31, 32);
+        video {
+            z-index: -1;
+            position: relative;
+            object-fit: cover;
         }
+        
+        
     }
 
     #col_card {
         background-color: $color2;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        padding-top:2vh;
+        h2 {
+            font-size: 40px;
+            margin-bottom:0;
+        }
         .img-hover {
             background-color: rgba(128, 128, 128, 0.293);
             width:100%;
             height:100%;
             display:none;
             justify-content: center;
+            object-fit: fill;
             align-items: center;
+            border-radius:6%;
+            margin:0;
+            cursor: pointer;
         }
-        td {
-            border:1vw solid $color2;
-            width:20vw;
-            height:40vh;
-            background-image: url("../assets/EmilyHeadshot.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position-x: center;
+        table {
+            margin-bottom:3vh;
+            margin-top:3vh;
+            #theater {
+                background-color: black;
+                background-image: url("../assets/theater.jpeg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position-x: 70%;
+                background-position-y: center;
+            }
+
+            #knitting {
+                background-image: url("../assets/knittingpic.jpeg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: 90%;
+            }
+
+            #dev {
+                background-color: black;
+                background-image: url("../assets/dev.jpeg");
+                background-repeat: no-repeat;
+                background-size:contain;
+                background-position-x: center;
+                background-position-y: center;
+            }
+
+            #travel {
+                background-image: url("../assets/travelpic.jpeg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position-y:90%;
+            }
+
+            #reading {
+                background-image: url("../assets/reading.jpeg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position-x: center;
+            }
+
+            #noodles {
+                background-image: url("../assets/noodles.jpeg");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-position-y: 60%;
+            }
+            td {
+                padding:0;
+                border:1vw solid $color2;
+                width:25vw;
+                height:50vh;
+                border-radius: 10%;
+                background-image: url("../assets/EmilyHeadshot.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: center;
+            }
         }
+       
     }
 
     #carousel {
-        background-color: $color1;
+        background-color: $color3;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        padding-top: 3rem;
+        align-items: center;
+        // padding-top: 2rem;
         padding-bottom: 3rem;
-        div {
-            background-color: $color1;
+        text-align: center;
+        // #car_text {
+        //     width:100vw;
+        // }
+        h2 {
+            font-size: 40px;
+        }
+        .button-cell {
+            width:10vw;
+        }
+        .img-button{
+            background-color: $color3;
             border-radius: 50%;
+            :hover {
+                cursor: pointer;
+            }
             :active {
                 color:rgb(211, 211, 211);
             }
             i {
                 color:white;
-                
             }
         }
 
         img {
-            margin-right:2rem;
-            margin-left:2rem;
-            // transition: 1s;
-            width:30vw;
-            height:30vw;
+            // margin-right:2rem;
+            // margin-left:2rem;
+            width:35vw;
+            height:35vw;
             object-fit: cover;
+            border-radius: 5%;
+            object-position: 50% 50%;
+        }
+
+        table {
+            margin-top:2vh;
+            margin-bottom: 2vh;
+            width:55vw;
+            margin-top: 3vh;
         }
     }
     #img-back{
-        background-image: url("../assets/EmilyHeadshot.jpg");
+        background-image: url("../assets/EmilyWaving.jpeg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         object-position: 50% 0%;
-        height:90vh;
+        height:100vh;
     }
 
     video {
@@ -138,6 +257,7 @@ body {
 // need to change the text size based on page position/pagesize
 nav {
     position:sticky;
+    z-index: 1;
     top:0;
     box-sizing: border-box;
     background-color: rgb(7, 7, 7);
@@ -163,7 +283,7 @@ nav {
             width:fit-content;
             margin-right: 0.5rem;
             :hover {
-                background-color: $color2;
+                background-color: $color1;
                 border-radius: 0.5vh;
                 cursor:pointer;
             }
@@ -183,24 +303,32 @@ nav {
         #section5.active {
             width:fit-content;
             padding:0;
-            background-color: $color2;
+            background-color: $color1;
             border-radius: 0.5vh;
             height: fit-content;
         }
     }
-
-    
 }
 
 footer {
     padding-top: 2vh;
     padding-bottom:2vh;
-    background-color: black;
+    background-color: $color2;
     color:white;
     display:flex;
     bottom: 0;
     justify-content: center;
+    text-align: center;
     a {
         color:white;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-weight:lighter;
+        // font-size: 20px;
     }
 }
