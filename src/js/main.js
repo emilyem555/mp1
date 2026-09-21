@@ -1,7 +1,8 @@
 /* Your JS here. */
 /* srcs:https://www.delftstack.com/howto/javascript/change-image-src-javascript/ 
         https://www.w3schools.com/howto/howto_css_modals.asp
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video*/
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video
+        others I forgot were either in the above domains, or geeks for geeks with general JS use assistance/syntax */
 const img_list = ["./assets/abbypic.jpeg","./assets/faithepic.jpeg","./assets/kathpic.jpeg", "./assets/gracepic.jpeg", "./assets/JazminAllypic.jpeg"]
 
 let curr_img_idx = 0;
@@ -16,7 +17,7 @@ var section3 = document.getElementById("section3");
 var section2 = document.getElementById("section2");
 var section1 = document.getElementById("section1");
 var section4 = document.getElementById("section4");
-// var section5 = document.getElementById("section5");
+
 let background = document.getElementById("img-back");
 let cols = document.getElementById("col_card");
 let title = document.getElementById("title-card");
@@ -107,41 +108,34 @@ function changeImageLeft() {
     curr_img_idx = (curr_img_idx - 1 + img_list.length) % img_list.length;
     carousel_img.src = img_list[curr_img_idx];
 }
-// finish changing categories based on position
-// add click to scroll stuff
+
 function setActive () {
     let title = document.getElementById("title-card").getBoundingClientRect();
     let cols = document.getElementById("col_card").getBoundingClientRect();
     let carousel = document.getElementById("carousel").getBoundingClientRect();
     let img_back = document.getElementById("img-back").getBoundingClientRect();
-    // let emb_vid = document.getElementById("vid-embed").getBoundingClientRect();
     
     if(img_back.top - nav.getBoundingClientRect().bottom <=0) {
         document.getElementById("section3").className = "";
-        // document.getElementById("section5").className = "";
         document.getElementById("section4").className = "active";
         document.getElementById("section2").className = "";
         document.getElementById("section1").className = "";
     } else if(carousel.top - nav.getBoundingClientRect().bottom <= 0) {
-        // document.getElementById("section5").className = "";
         document.getElementById("section4").className = "";
         document.getElementById("section3").className = "active";
         document.getElementById("section2").className = "";
         document.getElementById("section1").className = "";
     } else if(cols.top - nav.getBoundingClientRect().bottom <=0) {
-        // document.getElementById("section5").className = "";
         document.getElementById("section2").className = "active";
         document.getElementById("section1").className = "";
         document.getElementById("section3").className = "";
         document.getElementById("section4").className = "";
     } else if(title.top - nav.getBoundingClientRect().bottom <=0) {
-        // document.getElementById("section5").className = "";
         document.getElementById("section1").className = "active";
         document.getElementById("section2").className = "";
         document.getElementById("section3").className = "";
         document.getElementById("section4").className = "";
     }  else {
-        // document.getElementById("section5").className = "";
         document.getElementById("section2").className = "";
         document.getElementById("section1").className = "";
         document.getElementById("section3").className = "";
@@ -158,7 +152,6 @@ function changeNav() {
         document.getElementById("section2").style.fontSize = "1vw";
         document.getElementById("section3").style.fontSize = "1vw";
         document.getElementById("section4").style.fontSize = "1vw";
-        // document.getElementById("section5").style.fontSize = "12px";
         document.getElementById("title").style.fontSize = "1.15vw";
 
     } else {
@@ -167,8 +160,6 @@ function changeNav() {
         document.getElementById("section2").style.fontSize = "1.2vw";
         document.getElementById("section3").style.fontSize = "1.2vw";
         document.getElementById("section4").style.fontSize = "1.2vw";
-        // document.getElementById("section5").style.fontSize = "16px";
         document.getElementById("title").style.fontSize = "1.5vw";
-        // modal.style.marginTop = "8vh";
     }
 }

@@ -1,7 +1,10 @@
 /* Your SCSS here. */
 
 /* srcs:- https://www.w3schools.com/css/css_background_image.asp
-        - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit*/
+        - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
+        - others I forgot were either in the above domains, or geeks for geeks with general rules/styling guides for rules to use.
+        */
+
 $nav-height:10vh;
 $color1:rgb(28, 61, 85);
 $color2: rgb(27, 27, 27);
@@ -183,12 +186,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding-top: 2rem;
         padding-bottom: 3rem;
         text-align: center;
-        // #car_text {
-        //     width:100vw;
-        // }
         h2 {
             font-size: 40px;
         }
@@ -210,8 +209,6 @@ body {
         }
 
         img {
-            // margin-right:2rem;
-            // margin-left:2rem;
             width:35vw;
             height:35vw;
             object-fit: cover;
@@ -240,21 +237,6 @@ body {
     }
 }
 
-// .active {
-//     border-radius: 2rem;
-//     width:fit-content;
-//     margin-right: 0.5rem;
-//     background-color:  $color2;
-//     border-radius: 0.5vh;
-//     height:6vh;
-//     h2 {
-//         padding-left: 1rem;
-//         padding-right:1rem;
-//         padding-top:0.75rem;
-//         padding-bottom:0.75rem;
-//     }
-// }
-// need to change the text size based on page position/pagesize
 nav {
     position:sticky;
     z-index: 1;
@@ -329,6 +311,5 @@ footer {
 
     h4 {
         font-weight:lighter;
-        // font-size: 20px;
     }
 }
