@@ -105,21 +105,26 @@ body {
             font-size: 40px;
             margin-bottom:0;
         }
-        .img-hover {
-            background-color: rgba(128, 128, 128, 0.293);
-            width:100%;
-            height:100%;
-            display:none;
-            justify-content: center;
-            object-fit: fill;
-            align-items: center;
-            border-radius:6%;
-            margin:0;
-            cursor: pointer;
-        }
-        table {
+        
+
+        #col-table {
+            .img-hover {
+                background-color: rgba(128, 128, 128, 0.293);
+                height:100%;
+                display:none;
+                justify-content: center;
+                object-fit: fill;
+                align-items: center;
+                border-radius:7%;
+                margin:0;
+                cursor: pointer;
+            }
             margin-bottom:3vh;
             margin-top:3vh;
+            #row-1, #row-2 {
+                display: flex;
+                justify-content: space-evenly;
+            }
             #theater {
                 background-color: black;
                 background-image: url("../assets/theater.jpeg");
@@ -165,16 +170,12 @@ body {
                 background-size:cover;
                 background-position-y: 60%;
             }
-            td {
+            #noodles, #reading, #travel, #dev, #knitting, #theater {
                 padding:0;
                 border:1vw solid $color2;
                 width:25vw;
                 height:50vh;
                 border-radius: 10%;
-                background-image: url("../assets/EmilyHeadshot.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position-x: center;
             }
         }
        
@@ -216,7 +217,9 @@ body {
             object-position: 50% 50%;
         }
 
-        table {
+        #carousel-table {
+            display:flex;
+            align-items: center;
             margin-top:2vh;
             margin-bottom: 2vh;
             width:55vw;

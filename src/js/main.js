@@ -46,17 +46,17 @@ for(let img of img_cols) {
         img.addEventListener("click",()=>modalView(img.id));
 }
 
-var td = cols.querySelectorAll("td");
-td.forEach(t => {
+var div = cols.getElementsByClassName("cell");
+for (let t of div){
     let imgs = t.getElementsByClassName("img-hover");
     let img;
-    if(imgs.length >0) {
+    if(imgs.length > 0) {
         img = imgs[0];
     }
     
     t.addEventListener("mouseover", ()=> {img.style.display = "flex";});
     t.addEventListener("mouseout", ()=> {img.style.display = "none";});
-})
+}
 
 var nav = document.getElementById("nav");
 window.onscroll = changeNav;
