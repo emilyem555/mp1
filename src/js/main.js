@@ -73,27 +73,27 @@ function modalView(id) {
     document.body.style.overflow = "hidden";
 
     if(id == "knitting-img") {
-         modal_img.src = "../assets/knittingpic.jpeg";
+         modal_img.src = "./assets/knittingpic.jpeg";
         modal_header.textContent = "Knitting";
         modal_text.textContent = "I have been knitting (on and off) since 7th grade! Since then, I have made many hats, slippers, and one failed sweater. The hat pictured was later completed and given as a gift to my little in my sorority!\n I am currently working on a tank top.";
     } else if(id == "travel-img") {
-       modal_img.src = "../assets/travelpic.jpeg";
+       modal_img.src = "./assets/travelpic.jpeg";
        modal_header.textContent = "Travel";
         modal_text.textContent = "I have been fortunate enough to travel to numerous places, including pize(as pictured). Some of my favorite places I have travelled to includes: Rome, Italy, London, UK, and Jamaica. I am currently hoping to someday visit Spain, especially Madrid and Barcelona.";
     } else if(id == "dev-img") {
-        modal_img.src = "../assets/dev.jpeg";
+        modal_img.src = "./assets/dev.jpeg";
         modal_header.textContent = "Coding";
         modal_text.textContent = "As a Computer Science student, I can truly say that coding has turned into one of my favorite things to do over the past few years. I have gotten to learn so much about it, especially through hackathons! I have participated in HackIllinois each year, and this picture is from my first year doing it!";
     } else if(id == "noodles-img") {
-        modal_img.src = "../assets/noodles.jpeg";
+        modal_img.src = "./assets/noodles.jpeg";
         modal_header.textContent = "Cooking";
         modal_text.textContent = "Since living in an apartment, I have had a lot of fun experimenting with cooking and baking. One such exploration was with making fresh noodles, and turning it into homemade Fettucine Alfredo (pictured below). I have also made pancakes and chocolate chip cookies recently!";
     } else if(id == "theater-img") {
-        modal_img.src = "../assets/theater.jpeg";
+        modal_img.src = "./assets/theater.jpeg";
         modal_header.textContent = "Musical Theater";
         modal_text.textContent = "Though I have since retired from performing on stage, in high school I was very involved in musical theater! Even now, I frequently attend theater performances, and have a playbill display in my room.";
     } else if(id == "reading-img") {
-        modal_img.src = "../assets/reading.jpeg";
+        modal_img.src = "./assets/reading.jpeg";
         modal_header.textContent = "Reading";
         modal_text.textContent = "Ever since I could read, I have done so constantly and fervently. I strictly maintain my goodreads account, and read at minimum 25 books per year. My favorite genres are Fantasy, Contemporary Fiction, and Mystery/Thrillers.";
     } 
