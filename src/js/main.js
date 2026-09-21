@@ -26,7 +26,7 @@ let vid = document.getElementById("vid-embed");
 
 section3.addEventListener("click",() => {carousel.scrollIntoView({behavior:"smooth"});});
 section2.addEventListener("click",() => {cols.scrollIntoView({behavior:"smooth"});});
-section1.addEventListener("click",() => {window.scrollTo(0,0)});
+section1.addEventListener("click",() => {title.scrollIntoView({behavior:"smooth"});});
 section4.addEventListener("click",() => {background.scrollIntoView({behavior:"smooth"});});
 // section5.addEventListener("click",() => {vid.scrollIntoView({behavior:"smooth"});});
 let nav_font = section1.style.fontSize;
